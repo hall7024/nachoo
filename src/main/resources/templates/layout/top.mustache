@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>강남 카&드론</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {{>layout/css}}
+</head>
+<body>
+    <div class="d-flex flex-column flex-root">
+        <div class="page d-flex flex-row flex-column-fluid">
+            {{>layout/aside}}
+
+            <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+                {{>layout/header}}
+
+                <!--begin::Content-->
+                {{#isMap}}
+                <div class="content d-flex flex-column flex-column-fluid" id="kt_content" style="padding: 0; height: 92%;">
+                {{/isMap}}
+                {{^isMap}}
+                <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                {{/isMap}}

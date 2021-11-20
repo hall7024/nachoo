@@ -1,0 +1,14 @@
+{{>layout/top}}
+
+<div id="map" style="height: 100%; width: 100%;"></div>
+
+<div id="map_switch" class="btn-group" data-kt-buttons="true" data-kt-buttons-target="[data-kt-button]" style="position: absolute; background-color: #fff; margin-top: 5px; right: 5px;">
+    <label class="btn btn-outline-secondary text-muted text-hover-white text-active-white btn-outline btn-active-success active" data-kt-button="true">
+        <input class="btn-check" type="radio" name="switch_map" value="Base">일반지도
+    </label>
+    <label class="btn btn-outline-secondary text-muted text-hover-white text-active-white btn-outline btn-active-success" data-kt-button="true">
+        <input class="btn-check" type="radio" name="switch_map" value="Satellite">항공지도
+    </label>
+</div>
+
+{{>layout/bottom}}
