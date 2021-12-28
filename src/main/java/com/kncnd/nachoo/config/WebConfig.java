@@ -14,4 +14,11 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addInterceptor(new WebInterceptor()).addPathPatterns("/**/*.do");
     }
 
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("*")
+                .allowedMethods("GET", "POST")
+                .maxAge(3000);
+    }
 }

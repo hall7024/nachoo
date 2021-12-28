@@ -63,7 +63,7 @@ const fnMap = {
                      + "&crs=EPSG:3857"
                      + "&width=256"
                      + "&height=256"
-                     /*+ "&info_format=application/json"*/
+                     + "&info_format=application/json"
                      + "&i=" + e.coordinate[0]
                      + "&j=" + e.coordinate[1];
                      /*+ "&exceptions=application/json";*/
@@ -71,12 +71,14 @@ const fnMap = {
         $.ajax({
             type: 'GET',
             url: "http://api.vworld.kr/req/wms?" + params,
-            dataType: "application/xml",
+            dataType: "jsonp",
             success: function (data) {
                 console.log(data);
             },
             error: function (xhr, status, error) {
-                console.log('fail');
+                console.log(xhr);
+                console.log(status);
+                console.log(error);
             }
         });
     },

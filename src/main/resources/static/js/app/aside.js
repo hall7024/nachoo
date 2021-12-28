@@ -1,8 +1,8 @@
-var aside = {
+const aside = {
     init: function() {
-        var _this = this;
+        const _this = this;
 
-        var menuUrl = $("#asideForm #menu_url").val();
+        const menuUrl = $("#asideForm #menu_url").val();
         if (menuUrl) {
             $("#kt_aside a.menu-link[menu-url='" + menuUrl + "']").addClass('active');
         }
